@@ -1,0 +1,69 @@
+#include <GL/glut.h>
+#include <math.h>
+#include <iostream>
+
+int wnd_width=1300;
+int wnd_height=900;
+float pos_x = 0, pos_z = 0;
+float angle = 270;
+float speed = 0.1;
+
+void DrawFloor(){
+    glVertex3d(1, -0.2, -2);
+    glVertex3d(1, -0.2, 0);
+    glVertex3d(-1, -0.2, 0);
+    glVertex3d(-1, -0.2, -2);
+}
+void DrawWall(float x, float width, float height){
+    glVertex3f(x, -0.2+height, 0);
+    glVertex3f(x, -0.2+height, width);
+    glVertex3f(x, -0.2, width);
+    glVertex3f(x, -0.2, 0);
+}
+
+void KeyPressed(int key, int x, int y){
+    switch (key) {
+    case GLUT_KEY_UP: {
+        pos_x = speed * cos(angle);
+        pos_z = speed * sin(angle);
+        std::cout<<"x: "<<pos_x<<'\n';
+        std::cout<<"z: "<<pos_z<<'\n';
+        glTranslatef(pos_x, 0, pos_z);
+        break;
+    }
+    case GLUT_KEY_DOWN: {
+        pos_x = speed * cos(angle);
+        pos_z = speed * sin(angle);
+        glTranslatef(pos_x, 0, pos_z);
+        break;
+    }
+    case GLUT_KEY_LEFT: {
+        angle += 3;
+        glRotatef(3, 0, -0.1, 0);
+        break;
+    }
+    case GLUT_KEY_RIGHT: {
+        angle -= 3;
+        glRotatef(3, 0, 0.1, 0);
+        break;
+    }
+    }
+
+    glutPostRedisplay();
+    }
+    void display(){
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+        glBegin(GL_QUADS);
+        glColor3f(0, 0, 0.7);
+        DrawFloor();
+        glColor3f(0, 0.8, 0.1);
+        DrawWall(-0.5, -2, 0.7);
+        DrawWall(0.5, -2, 0.7);
+        glEnd();
+        glFlush();
+    }
+
+    void Idle(){
+
+        //glutPostRedisplay();
+    }
