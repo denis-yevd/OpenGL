@@ -28,3 +28,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 HEADERS += \
     camera.h \
     point.h
+
+DISTFILES += \
+    whitemarble.jpg

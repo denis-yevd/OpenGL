@@ -27,15 +27,15 @@ void Camera::MoveBack(){
 }
 
 void Camera::TurnLeft(){
+    angle_rad -=0.05;
     view.x = pos.x + (radius * cos(angle_rad));
     view.z = pos.z + (radius * sin(angle_rad));
-    angle_rad -=0.02;
 }
 
 void Camera::TurnRight(){
+    angle_rad +=0.05;
     view.x = pos.x + (radius * cos(angle_rad));
     view.z = pos.z + (radius * sin(angle_rad));
-    angle_rad +=0.02;
 }
 
 void Camera::PrintPosition(){

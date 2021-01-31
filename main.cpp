@@ -12,6 +12,7 @@ int main(int argc, char** argv)
     glutDisplayFunc(display);
     glutIdleFunc(Idle);
     glutSpecialFunc(KeyPressed);
+    TextureInit();
     glutMainLoop();
     return 0;
 }
