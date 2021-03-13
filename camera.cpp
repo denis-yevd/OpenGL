@@ -13,7 +13,6 @@ float Camera::ToRadians(float degree){
 void Camera::MoveForward(){
     Point d = view - pos;
     d * 2;
-    d.PrintCoords();
     next_pnt = pos + d;
     pos = view;
     view = next_pnt;
@@ -27,13 +26,13 @@ void Camera::MoveBack(){
 }
 
 void Camera::TurnLeft(){
-    angle_rad -=0.05;
+    angle_rad -=0.02;
     view.x = pos.x + (radius * cos(angle_rad));
     view.z = pos.z + (radius * sin(angle_rad));
 }
 
 void Camera::TurnRight(){
-    angle_rad +=0.05;
+    angle_rad +=0.02;
     view.x = pos.x + (radius * cos(angle_rad));
     view.z = pos.z + (radius * sin(angle_rad));
 }

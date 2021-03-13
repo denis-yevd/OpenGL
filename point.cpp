@@ -38,7 +38,7 @@ Point Point::operator -(Point point){
 
 void Point::operator =(Point point){
     this->x = point.x;
-    this->y = point.y;
+    //this->y = point.y;
     this->z = point.z;
 }
 

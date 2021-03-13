@@ -10,9 +10,12 @@ int main(int argc, char** argv)
     glEnable(GL_NORMALIZE);
     glutCreateWindow("OpenGL my");
     glutDisplayFunc(display);
-    glutIdleFunc(Idle);
-    glutSpecialFunc(KeyPressed);
-    TextureInit();
+    //glutIdleFunc(Idle);
+    glutKeyboardFunc(KeyPressed);
+    glutPassiveMotionFunc(MouseMove);
+    glutSetCursor(GLUT_CURSOR_CROSSHAIR);
+    TextureInit("..//OpenGL/t.jpg");
+
     glutMainLoop();
     return 0;
 }
