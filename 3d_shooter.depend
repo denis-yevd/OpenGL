@@ -1,13 +1,13 @@
 # depslib dependency file v1.0
-1615557913 source:/media/denis/LocalDiskD/Working/3d_shooter/game_engine.cpp
+1616076455 source:/media/denis/LocalDiskD/Working/3d_shooter/game_engine.cpp
 
-1615557584 source:/media/denis/LocalDiskD/Working/3d_shooter/camera.cpp
+1615820774 source:/media/denis/LocalDiskD/Working/3d_shooter/camera.cpp
 	"camera.h"
 
-1615556753 /media/denis/LocalDiskD/Working/3d_shooter/camera.h
+1615820782 /media/denis/LocalDiskD/Working/3d_shooter/camera.h
 
-1615557406 /media/denis/LocalDiskD/Working/3d_shooter/game_engine.h
+1615823145 /media/denis/LocalDiskD/Working/3d_shooter/game_engine.h
 
-1615476713 source:/media/denis/LocalDiskD/Working/3d_shooter/main.cpp
+1616073381 source:/media/denis/LocalDiskD/Working/3d_shooter/main.cpp
 	"game_engine.h"
 
